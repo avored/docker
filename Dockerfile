@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM debian:jessie
 MAINTAINER Purvesh Patel <ind.purvesh@gmail.com>
 
 RUN apt-get update && \
@@ -8,9 +8,6 @@ RUN apt-get update && \
     
 COPY nginx.conf /etc/nginx/
 COPY default.conf /etc/nginx/sites-available/
-
-RUN ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/app
-RUN rm /etc/nginx/sites-enabled/default
 
 RUN echo "upstream php-upstream { server php-fpm:9000; }" > /etc/nginx/conf.d/upstream.conf
 

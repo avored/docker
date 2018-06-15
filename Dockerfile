@@ -1,4 +1,5 @@
-DockerfileFROM alpine
+ROM php:alpine
+LABEL maintainer="Purvesh <ind.purvesh@gmail.com>"
 
 ENV DOMAIN server.tld
 ENV MAIL admin@admin.com

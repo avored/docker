@@ -1,4 +1,4 @@
-ROM php:7-fpm
+FROM php:7-fpm
 MAINTAINER Purvesh Patel <ind.purvesh@gmail.com>
 
 RUN apt-get update && apt-get install -y \
